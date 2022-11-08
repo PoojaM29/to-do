@@ -1,0 +1,37 @@
+mat-form-field {
+    width: 100%;
+  }
+
+  .text-inside {
+    position: absolute;
+    left: 5px;
+    width: 100%;
+  }
+  
+  textarea.mat-input-element{
+    height: 50;
+    resize: none;
+  }
+
+  .btn-sec {
+    margin-right: 5rem !important;
+    text-align: right;
+    margin-top: 1.5em;
+  }
+  .Update-btn {
+    margin: 5px;
+  }
+  .Discard-btn {
+    margin: 5px;
+  }
+
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }

@@ -1,0 +1,51 @@
+<mat-dialog-content>
+  <div>
+    <div class="add-title">
+      <h2 class="primary">Add Todo</h2>
+    </div>
+    <div>
+      <form [formGroup]="addToDoForm" (change)="formChanged()">
+        <mat-grid-list cols="1" rowHeight="85px">
+          <mat-grid-tile>
+            <div class="text-inside">
+              <mat-form-field>
+                <input matInput placeholder="Title" value={{title}} formControlName="todoTitle" required>
+
+              </mat-form-field>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div class="text-inside">
+              <mat-form-field>
+                <textarea matInput placeholder="Description" formControlName="description"></textarea>
+              </mat-form-field>
+            </div>
+          </mat-grid-tile>
+
+          <mat-grid-tile *ngIf="data">
+            <div class="text-inside">
+                <input type="checkbox"  [(ngModel)]="checked" formControlName="checked">isCompleted
+            </div>
+          </mat-grid-tile>
+          <!-- <mat-grid-tile>
+            <div class="text-inside">
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker1" placeholder="Date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </mat-grid-tile> -->
+
+
+        </mat-grid-list>
+
+        <div class="btn-sec">
+          <button mat-raised-button type="submit" color="primary" class="Update-btn" (click)="addTodo()">Save</button>
+          <button mat-raised-button type="button" class="Discard-btn" (click)="close()">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</mat-dialog-content>
